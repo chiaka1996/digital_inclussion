@@ -16,18 +16,21 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-[#1E2329] text-white min-h-[500px] overflow-hidden">
-      <div className="max-w-7xl px-4 sm:px-6 lg:px-10  h-full">
+    <footer className="relative bg-[#1E2329] text-white overflow-hidden pt-[50px] md:pt-[65px]">
+      <div className="max-w-7xl px-[24px] sm:px-6 lg:px-10 h-full">
         {/* Main Content Grid */}
         <div className="flex justify-between h-full">
           {/* Left Content Column */}
           <div className="flex-1 max-w-2xl py-0 pr-8 flex flex-col justify-between">
             {/* Top Content (Call to Action) */}
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold mb-8 tracking-wider">
+              <div className="mb-[24px] md:mb-[50px]">
+              <h2 className="inline text-[18px] sm:text-[26px] font-[700] tracking-wider border border-[#fff] border-x-0 border-t-0">
                 LOOKING FOR DEEPER INSIGHTS?
               </h2>
-              <p className="text-lg sm:text-4xl text-white leading-relaxed mb-10">
+              </div>
+
+              <p className="loraFont text-[20px] sm:text-[37px] text-white leading-[142%] tracking-[-3%] mb-[35px] md:mb-10">
                 We would be glad to partner with your strategy and product team
                 to uncover the needs of new markets, validate existing
                 assumptions or refine opportunity areas for your current
@@ -35,9 +38,9 @@ const Footer = () => {
               </p>
               <Link
                 href="#"
-                className="flex items-center text-2xl text-[#FEF7EA] hover:text-white transition-colors"
+                className="flex items-center text-[20px] md:text-[26px] text-[#FEF7EA] hover:text-[#fff] transition-colors"
               >
-                Back to Home
+                Start a Conversation
                 <svg
                   className="ml-2 w-4 h-4"
                   fill="none"
@@ -58,7 +61,7 @@ const Footer = () => {
           {/* Bottom Content (Legal/Copyright) */}
 
           {/* Right Segmented Bar Column (Absolutely Positioned) */}
-          <div className="absolute top-0 right-0 h-[664px] w-[100px] flex flex-col justify-center items-center">
+          <div className="hidden absolute top-[65px] right-0 h-[664px] w-[100px] md:flex flex-col justify-center items-center">
             {segments.map((segment, index) => (
               <Link
                 key={segment.title}
@@ -74,8 +77,8 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="mt-[267px]">
-          <p className="text-sm text-white mb-20 max-w-sm italic">
+        <div className="mt-[67px] md:mt-[267px]">
+          <p className="text-[12px] leading-[140%] md:text-[14px] text-white mb-20 max-w-sm italic">
             Data reflects survey responses with unequal sample sizes by country.
             Results from Nigeria, Benin, and Ghana represent more robust
             samples, while findings from Liberia and Côte d'Ivoire should be
@@ -84,7 +87,7 @@ const Footer = () => {
         </div>
       </div>
       {/* Logo and Bottom Bar */}
-      <div className="flex justify-between items-end w-full px-10 pt-4">
+      <div className="hidden md:flex flex-col md:flex-row justify-between items-end w-full px-10 pt-4">
         <div className="font-extrabold text-2xl tracking-widest text-[#F1B130]">
           DODO
         </div>
@@ -99,7 +102,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex justify-between items-end w-full px-10 pt-4 pb-[56px]">
+      <div className="hidden md:flex justify-between items-end w-full px-10 pt-4 pb-[56px]">
         <div className="">
           <a href="www.dododesign.africa" className="mr-4">www.dododesign.africa</a>
         </div>
@@ -115,6 +118,44 @@ const Footer = () => {
           ))}
         </div>
       </div>
+
+        {/* Dodo social for mobile */}
+      <section className="block md:hidden px-[24px]">
+         <div className="font-extrabold text-2xl tracking-widest text-[#F1B130]">
+          DODO
+        </div>
+          <div className="text-[16px] leading-[100%]">
+          <a href="www.dododesign.africa" className="mr-4">www.dododesign.africa</a>
+        </div>
+
+        <div className="flex justify-between items-start text-[18px] leading-[120%] mt-[40px]"> 
+          <div className="space-y-[16px]">
+             <a href="/" className="block hover:text-white transition-colors">
+            Linkedin
+          </a>
+          <a href="/" className="block hover:text-white transition-colors">
+            Twitter (X)
+          </a>
+          </div>
+
+          <div className="space-y-[16px]">
+             <a href="/" className="block hover:text-white transition-colors">
+            Instagram
+          </a>
+          <a href="/" className="block hover:text-white transition-colors">
+            Facebook
+          </a>
+          </div>
+        </div>
+
+        <div className="mt-[40px] text-[18px] leading-[120%] tracking-[-3%] fontHelvetica space-y-[16px] mb-[24px]">
+           <a href="mailto:www.dododesign.africa" className="block ">hello@dododesign.africa</a>
+           <div className="">+234 809 522 1113 (Whatsapp)</div>
+        </div>
+
+
+
+      </section>
     </footer>
   );
 };
